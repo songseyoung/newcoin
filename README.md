@@ -1,0 +1,2 @@
+# newcoin
+newcoin website
