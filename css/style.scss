@@ -1,0 +1,23 @@
+//adobe font-Shuttleblock
+@import url("https://use.typekit.net/giy1hit.css");
+
+//pretendard
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+//font-family: shuttleblock, sans-serif;
+//font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+
+$main_font: shuttleblock, sans-serif;
+
+
+
+body {
+    background-color: black;
+    color: #fff;
+
+    h1 {
+        font-family: $main_font;
+        font-size: 3rem;
+    }
+}
