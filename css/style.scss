@@ -126,7 +126,6 @@ body {
 
 
 
-
     .service_info {
         text-align: center;
         padding: 70px 0 170px;
@@ -148,6 +147,7 @@ body {
         margin: 0 auto;
         border-top: 1px solid #2B2B2B;
         position: relative;
+        padding-top: 150px;
 
         .container {
             display: block;
@@ -173,36 +173,46 @@ body {
                     }
 
                 }
+
+                .active {
+                    color: #fff;
+                }
             }
+
+
 
             section {
                 width: 850px;
+                height: 600px;
                 margin: 0 auto;
-                padding: 150px 0 0;
+                //padding: 150px 0 0;
 
-                h2 {
-                    font-family: $main_font;
-                    font-size: 2.75rem;
-                    font-weight: 600;
-                    line-height: 115%;
-                    margin: 10px 0 40px;
-                }
+                .inner_test {
 
-                h3 {
-                    display: inline-block;
-                    font-family: $main_font;
-                    font-size: 1.25rem;
-                    font-weight: 600;
-                    background: linear-gradient(15deg, #D3F50F 8%, #0CFFE2 45%, #49FF66 100%);
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
+                    h2 {
+                        font-family: $main_font;
+                        font-size: 2.75rem;
+                        font-weight: 600;
+                        line-height: 115%;
+                        margin: 10px 0 40px;
+                    }
 
-                p {
-                    color: #bababa;
-                    font-size: 1rem;
-                    line-height: 180%;
+                    h3 {
+                        display: inline-block;
+                        font-family: $main_font;
+                        font-size: 1.25rem;
+                        font-weight: 600;
+                        background: linear-gradient(15deg, #D3F50F 8%, #0CFFE2 45%, #49FF66 100%);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+
+                    p {
+                        color: #bababa;
+                        font-size: 1rem;
+                        line-height: 180%;
+                    }
                 }
             }
         }

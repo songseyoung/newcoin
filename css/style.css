@@ -111,6 +111,7 @@ body .contents {
   margin: 0 auto;
   border-top: 1px solid #2B2B2B;
   position: relative;
+  padding-top: 150px;
 }
 body .contents .container {
   display: block;
@@ -134,19 +135,22 @@ body .contents .container .pin_list h5 {
 body .contents .container .pin_list h5 span {
   padding: 0 10px;
 }
+body .contents .container .pin_list .active {
+  color: #fff;
+}
 body .contents .container section {
   width: 850px;
+  height: 600px;
   margin: 0 auto;
-  padding: 150px 0 0;
 }
-body .contents .container section h2 {
+body .contents .container section .inner_test h2 {
   font-family: shuttleblock, sans-serif;
   font-size: 2.75rem;
   font-weight: 600;
   line-height: 115%;
   margin: 10px 0 40px;
 }
-body .contents .container section h3 {
+body .contents .container section .inner_test h3 {
   display: inline-block;
   font-family: shuttleblock, sans-serif;
   font-size: 1.25rem;
@@ -156,7 +160,7 @@ body .contents .container section h3 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-body .contents .container section p {
+body .contents .container section .inner_test p {
   color: #bababa;
   font-size: 1rem;
   line-height: 180%;
