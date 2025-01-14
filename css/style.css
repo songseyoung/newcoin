@@ -122,9 +122,7 @@ body .contents .container .pin_list {
   display: inline-block;
   margin: auto;
   position: absolute;
-  position: fixed;
   left: 10px;
-  top: 10px;
 }
 body .contents .container .pin_list h5 {
   color: #787878;
@@ -140,7 +138,7 @@ body .contents .container .pin_list .active {
 }
 body .contents .container section {
   width: 850px;
-  height: 600px;
+  height: 500px;
   margin: 0 auto;
 }
 body .contents .container section .inner_test h2 {

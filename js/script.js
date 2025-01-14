@@ -1,6 +1,8 @@
 (function () {
 
-    var controller = new ScrollMagic.Controller({ globalSceneOptions: { duration: 600 } });
+    var controller = new ScrollMagic.Controller({
+        globalSceneOptions: {}
+    });
 
     var tween1 = TweenMax.to('#animate1', 0.3, {
     });
@@ -14,8 +16,9 @@
     });
 
     var scene1 = new ScrollMagic.Scene({
-        triggerElement: "#trigger1"
-
+        triggerElement: "#trigger1",
+        duration: 500,
+        offset: 0
     })
         .setClassToggle('.info1', 'active')
         .setTween(tween1)
@@ -26,7 +29,9 @@
 
 
     var scene2 = new ScrollMagic.Scene({
-        triggerElement: "#trigger2"
+        triggerElement: "#trigger2",
+        duration: 500,
+        offset: 0
     })
         .setClassToggle('.info2', 'active')
         .setTween(tween2)
@@ -36,7 +41,9 @@
         });
 
     var scene3 = new ScrollMagic.Scene({
-        triggerElement: "#trigger3"
+        triggerElement: "#trigger3",
+        duration: 500,
+        offset: 0
     })
         .setClassToggle('.info3', 'active')
         .setTween(tween3)
@@ -44,8 +51,11 @@
         .addIndicators({
             name: "3"
         });
+
     var scene4 = new ScrollMagic.Scene({
-        triggerElement: "#trigger4"
+        triggerElement: "#trigger4",
+        duration: 500,
+        offset: 0
     })
         .setClassToggle('.info4', 'active')
         .setTween(tween4)
@@ -53,8 +63,11 @@
         .addIndicators({
             name: "4"
         });
+
     var scene5 = new ScrollMagic.Scene({
-        triggerElement: "#trigger5"
+        triggerElement: "#trigger5",
+        duration: 500,
+        offset: 0
     })
         .setClassToggle('.info5', 'active')
         .setTween(tween4)
@@ -62,5 +75,15 @@
         .addIndicators({
             name: "5"
         });
+
+
+    var scene = new ScrollMagic.Scene({
+        triggerElement: '#test-trigger1',
+        duration: 2500,
+        offset: 0
+    })
+        .setPin('#animate')
+        .addTo(controller)
+        .addIndicators({ name: "setSpin" });
 
 }())
