@@ -93,6 +93,10 @@ body {
         text-align: center;
         padding: 60px 0;
 
+        img {
+            width: 350px;
+        }
+
         h1 {
             font-family: $main_font;
             font-size: 5rem;
@@ -232,7 +236,7 @@ body {
             opacity: 0.1;
         }
 
-        h5 {
+        p {
             padding: 30px 0 50px;
             font-size: 0.8rem;
             color: #888;
