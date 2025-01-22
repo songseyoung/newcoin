@@ -31,6 +31,8 @@ body {
         left: 0;
         right: 0;
         top: 0;
+        z-index: 1;
+        margin-top: -3px;
 
         .header_common {
             width: 33.3%;
@@ -49,8 +51,38 @@ body {
             a {
                 font-family: $main_font;
                 color: #aaa;
-                padding: 10px;
+                padding: 0 15px;
+                position: relative;
+                line-height: 70px;
+                display: inline-block;
 
+                .dropdown {
+                    display: none;
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    width: 180px;
+                    background-color: #222;
+                    border: 1px solid #333;
+                    border-radius: 10px;
+                    color: #bbb;
+                    font-size: 1rem;
+                    line-height: 120%;
+                    padding: 15px 0;
+                    //backdrop-filter: blur(10px);
+
+                    span {
+                        color: #666;
+                        font-size: 13px;
+
+                    }
+                }
+
+                &:hover {
+                    .dropdown {
+                        display: block;
+                    }
+                }
             }
         }
 
@@ -124,7 +156,7 @@ body {
             border-radius: 60px;
             height: 65px;
             line-height: 65px;
-            width: 220px;
+            width: 250px;
             margin-top: 60px;
             padding: 0;
             display: inline-block;
@@ -158,17 +190,18 @@ body {
         padding-top: 150px;
 
         .container {
+            position: relative;
             display: block;
             width: 100%;
-            position: relative;
+            height: 2200px;
 
             .pin_list {
                 display: inline-block;
                 margin: auto;
-                position: absolute;
-                //position: fixed;
+                position: sticky;
                 left: 10px;
-                //top: 10px;
+                left: 5%;
+                top: 80px;
 
                 h5 {
                     color: #787878;
@@ -177,7 +210,7 @@ body {
                     padding: 10px 0;
 
                     span {
-                        padding: 0 10px;
+                        padding: 0 20px 0 0;
                     }
 
                 }
@@ -191,7 +224,7 @@ body {
 
             section {
                 width: 850px;
-                height: 500px;
+                //height: 500px;
                 margin: 0 auto;
                 //padding: 150px 0 0;
 
@@ -216,10 +249,118 @@ body {
                         -webkit-text-fill-color: transparent;
                     }
 
-                    p {
-                        color: #bababa;
-                        font-size: 1rem;
-                        line-height: 180%;
+                }
+            }
+
+            section.section_01 {
+                height: 900px;
+
+                .inner {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    img {
+                        display: inline-block;
+                    }
+                }
+            }
+
+            section.section_02 {
+                height: 600px;
+                background-image: url(../img/section_2_bg.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+
+                .inner {
+                    h3 {
+                        font-family: $main_font;
+                        font-size: 1.875rem;
+                        padding: 120px 0 70px;
+                    }
+
+                    .content {
+                        display: flex;
+
+                        div {
+                            display: inline-block;
+                            vertical-align: top;
+                            width: 50%;
+
+                            h1 {
+                                font-family: $main_font;
+                                font-size: 6.25rem;
+                                line-height: 120%;
+                                background: linear-gradient(15deg, #D3F50F 8%, #0CFFE2 45%, #49FF66 100%);
+                                background-clip: text;
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                display: inline-block;
+                                padding-bottom: 13px;
+                            }
+
+
+                            span {
+                                font-family: $main_font;
+                                font-size: 1rem;
+                                color: #9c9c9c;
+                                line-height: 130%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            section.section_03 {
+                height: 700px;
+
+                .inner {
+                    h3 {
+                        font-family: $main_font;
+                        font-size: 1.875rem;
+                        padding: 50px 0;
+                    }
+
+                    .game_poster {
+                        text-align: left;
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+
+                        img.live {
+                            width: 260px;
+                            margin-right: 15px;
+                        }
+
+                        img.coming {
+                            height: 295px;
+                        }
+                    }
+
+                    a.goto_store {
+                        font-family: $main_font;
+                        font-size: 1.3rem;
+                        font-weight: 700;
+                        text-decoration: none;
+                        background-color: #fff;
+                        color: #000;
+                        border-radius: 60px;
+                        height: 65px;
+                        line-height: 65px;
+                        width: 220px;
+                        margin-top: 30px;
+                        padding: 0;
+                        display: inline-block;
+                        background-image: linear-gradient(to left bottom, #E5FF05, #00FFBB);
+                        text-align: center;
+
+                        img {
+                            vertical-align: sub;
+                        }
                     }
                 }
             }
@@ -229,18 +370,54 @@ body {
 
     footer {
         text-align: center;
-        padding: 200px 0 0;
+        padding: 300px 0 0;
 
-        img {
+        img.footer_logo {
             width: 90%;
             opacity: 0.1;
         }
 
-        p {
-            padding: 30px 0 50px;
-            font-size: 0.8rem;
-            color: #888;
+
+        .footer_area {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            margin: 0 auto;
+            padding: 30px 0;
+
+            p {
+                padding: 0;
+                font-size: 0.9rem;
+                color: #888;
+                display: inline-block;
+                vertical-align: middle;
+                width: 33.3%;
+                text-align: left;
+            }
+
+            .arbitrum_logo {
+                display: inline-block;
+                width: 33.3%;
+
+                img {
+                    vertical-align: middle;
+                }
+            }
+
+            a {
+                display: inline-block;
+                font-size: 0.9rem;
+                color: #888;
+                vertical-align: middle;
+                transition: all 0.2s ease;
+                width: 33.3%;
+                text-align: right;
+
+                &:hover {
+                    color: #ccc;
+                }
+            }
         }
     }
-
 }
