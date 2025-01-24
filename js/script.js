@@ -19,9 +19,7 @@
         .setClassToggle('.info1', 'active')
         .setTween(tween1)
         .addTo(controller)
-        .addIndicators({
-            name: "1"
-        });
+
 
 
     var scene2 = new ScrollMagic.Scene({
@@ -32,9 +30,7 @@
         .setClassToggle('.info2', 'active')
         .setTween(tween2)
         .addTo(controller)
-        .addIndicators({
-            name: "2"
-        });
+
 
     var scene3 = new ScrollMagic.Scene({
         triggerElement: "#trigger3",
@@ -44,7 +40,5 @@
         .setClassToggle('.info3', 'active')
         .setTween(tween3)
         .addTo(controller)
-        .addIndicators({
-            name: "3"
-        });
+
 }())
