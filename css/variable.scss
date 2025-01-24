@@ -1,0 +1,48 @@
+// mixin을 사용할 떄 @include {name} 구조로 활용한다.
+
+
+//$desktop: 1440px;
+//$desktopbetween: 1350px;
+//$counter: 1250px;
+//$tablet: 1000px;
+$mobile: 600px;
+//$small: 300px;
+
+
+
+@mixin small {
+    @media (max-width: $small) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: ($mobile + 1px)) and (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin counter {
+    @media (min-width: ($tablet + 1px)) and (max-width: $counter) {
+        @content;
+    }
+}
+
+
+@mixin desktopbetween {
+    @media (min-width: ($tablet + 1px)) and (max-width: $desktopbetween) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}

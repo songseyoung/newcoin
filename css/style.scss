@@ -1,15 +1,20 @@
+@import 'variable.scss';
+
 //adobe font-Shuttleblock
 @import url("https://use.typekit.net/giy1hit.css");
 
 //pretendard
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
-//font-family: shuttleblock, sans-serif;
 //font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 
 
 $main_font: shuttleblock, sans-serif;
 
+::selection {
+    color: #000;
+    background-color: #49FF66;
+}
 
 
 body {
@@ -34,6 +39,13 @@ body {
         z-index: 1;
         margin-top: -3px;
 
+
+        @include mobile {
+            background-color: #000;
+            z-index: 99;
+        }
+
+
         .header_common {
             width: 33.3%;
         }
@@ -42,11 +54,19 @@ body {
             display: inline-block;
             text-align: left;
             padding-left: 5%;
+
+            img {
+                vertical-align: middle;
+            }
         }
 
         .menu_area {
             display: inline-block;
             text-align: center;
+
+            @include mobile {
+                display: none;
+            }
 
             a {
                 font-family: $main_font;
@@ -84,12 +104,17 @@ body {
                     }
                 }
             }
+
         }
 
         .quick_btn_area {
             display: inline-block;
             text-align: right;
             padding-right: 5%;
+
+            @include mobile {
+                display: none;
+            }
 
             a {
                 margin-left: 10px;
@@ -117,6 +142,160 @@ body {
                 height: 40px;
                 line-height: 40px;
                 border-radius: 3px;
+            }
+        }
+
+
+
+        .mobile_menu {
+            display: none;
+
+
+            @include mobile {
+                display: block;
+            }
+
+
+            .mobile-menu__btn {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 30px;
+                height: 70px;
+                padding: 0 15px;
+                cursor: pointer;
+            }
+
+            .mobile-menu__icon {
+                display: block;
+                position: relative;
+                background: #fff;
+                width: 90%;
+                height: 3px;
+                border-radius: 10px;
+                transition: 0.4s;
+            }
+
+            .mobile-menu__icon::after,
+            .mobile-menu__icon::before {
+                content: "";
+                display: block;
+                position: absolute;
+                background: #fff;
+                width: 100%;
+                height: 3px;
+                border-radius: 10px;
+                transition: 0.4s;
+            }
+
+            .mobile-menu__icon::after {
+                top: 8px;
+            }
+
+            .mobile-menu__icon::before {
+                top: -8px;
+            }
+
+            .mobile-menu__container {
+                position: fixed;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                //justify-content: center;
+                top: 65px;
+                left: 0;
+                right: 0;
+                z-index: 999;
+                height: 0;
+                opacity: 1;
+                transition: 0.5s;
+                transition-delay: 0.2s;
+                overflow: hidden;
+                background-color: #111;
+
+
+
+                .list {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+
+                    a {
+                        text-decoration: none;
+                        color: #9B9B9B;
+                        font-family: $main_font;
+                    }
+
+                    a.menu {
+                        display: block;
+                        line-height: 50px;
+
+
+                        &:nth-child(1) {
+                            margin-top: 30px;
+                        }
+                    }
+
+                    .sns {
+                        position: absolute;
+                        bottom: 95px;
+                        left: 0;
+                        right: 0;
+
+                        a {
+                            margin: 0 10px;
+
+                            img {
+                                width: 42px;
+                            }
+                        }
+                    }
+
+                    a.launch_btn {
+                        font-family: $main_font;
+                        font-size: 1rem;
+                        font-weight: 600;
+                        color: #000;
+                        background-color: #fff;
+                        width: 85%;
+                        height: 55px;
+                        line-height: 55px;
+                        display: block;
+                        margin: 0 auto;
+                        border-radius: 5px;
+                    }
+                }
+            }
+
+
+            .mobile-menu__checkbox {
+                display: none;
+            }
+
+
+            .mobile-menu__checkbox:checked~.mobile-menu__container {
+                height: 100%;
+                transition-delay: 0s;
+            }
+
+            .mobile-menu__checkbox:checked~.mobile-menu__btn .mobile-menu__icon {
+                background: transparent;
+            }
+
+            .mobile-menu__checkbox:checked~.mobile-menu__btn .mobile-menu__icon::before,
+            .mobile-menu__checkbox:checked~.mobile-menu__btn .mobile-menu__icon::after {
+                top: 0;
+            }
+
+            .mobile-menu__checkbox:checked~.mobile-menu__btn .mobile-menu__icon::after {
+                transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+            }
+
+            .mobile-menu__checkbox:checked~.mobile-menu__btn .mobile-menu__icon::before {
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
             }
         }
     }
@@ -162,8 +341,30 @@ body {
             display: inline-block;
             background-image: linear-gradient(to left bottom, #E5FF05, #00FFBB);
         }
-    }
 
+        @include mobile {
+            img {
+                width: 280px;
+            }
+
+            h1 {
+                font-size: 2.3rem;
+                padding: 0 5%;
+            }
+
+            h3 {
+                padding: 35px 5% 0;
+            }
+
+            a.goto_btn {
+                font-size: 1.1rem;
+                width: 230px;
+                height: 60px;
+                line-height: 60px;
+                margin-top: 40px;
+            }
+        }
+    }
 
 
     .service_info {
@@ -180,6 +381,16 @@ body {
             line-height: 130%;
             margin-top: 50px;
         }
+
+        @include mobile {
+            padding: 70px 0 130px;
+
+            h3 {
+                font-size: 1.2rem;
+                padding: 0 5%;
+
+            }
+        }
     }
 
 
@@ -189,11 +400,16 @@ body {
         position: relative;
         padding-top: 150px;
 
+        @include mobile {
+            padding-top: 50px;
+        }
+
         .container {
             position: relative;
             display: block;
-            width: 100%;
+            width: 100vw;
             height: 2200px;
+            //overflow: hidden;
 
             .pin_list {
                 display: inline-block;
@@ -212,21 +428,28 @@ body {
                     span {
                         padding: 0 20px 0 0;
                     }
-
                 }
 
                 .active {
                     color: #fff;
                 }
+
+                @include mobile {
+                    display: none;
+                }
+
             }
 
+
+            .wrap {
+                width: 100vw;
+                overflow: hidden;
+            }
 
 
             section {
                 width: 850px;
-                //height: 500px;
                 margin: 0 auto;
-                //padding: 150px 0 0;
 
                 .inner_test {
 
@@ -248,7 +471,10 @@ body {
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                     }
+                }
 
+                @include mobile {
+                    width: 100vw;
                 }
             }
 
@@ -261,6 +487,21 @@ body {
 
                     img {
                         display: inline-block;
+                    }
+                }
+
+                @include mobile {
+                    height: auto;
+
+                    .inner {
+                        display: block;
+                        text-align: center;
+
+                        img {
+                            display: block;
+                            width: 85%;
+                            margin: 20px auto;
+                        }
                     }
                 }
             }
@@ -309,6 +550,45 @@ body {
                         }
                     }
                 }
+
+
+                @include mobile {
+                    height: auto;
+
+                    .inner {
+                        h3 {
+                            font-size: 1.3rem;
+                            text-align: center;
+                            padding: 140px 0 50px
+                        }
+
+                        .content {
+                            display: block;
+                            width: 85%;
+                            margin: auto;
+
+                            div {
+                                display: block;
+                                width: 100%;
+                                text-align: center;
+                                margin: 0 0 50px;
+
+                                h1 {
+                                    font-size: 4.5rem;
+                                    padding-bottom: 5px;
+                                }
+
+                                span {
+                                    font-size: 0.9rem;
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+
+
             }
 
             section.section_03 {
@@ -339,6 +619,10 @@ body {
                         img.coming {
                             height: 295px;
                         }
+
+                        img.m_coming {
+                            display: none;
+                        }
                     }
 
                     a.goto_store {
@@ -363,14 +647,81 @@ body {
                         }
                     }
                 }
+
+
+                @include mobile {
+                    height: auto;
+
+                    .inner {
+                        h3 {
+                            font-size: 1.3rem;
+                            text-align: center;
+                            padding: 100px 0 30px
+                        }
+
+                        .game_poster {
+                            display: block;
+                            text-align: center;
+                            position: relative;
+                            height: 300px;
+
+                            img.live {
+                                width: 200px;
+                                margin: auto;
+                                display: block;
+                                position: absolute;
+                                z-index: 1;
+                                left: 50%;
+                                transform: translate(-50%, 0);
+                            }
+
+                            img.coming {
+                                display: none;
+                            }
+
+                            img.m_coming {
+                                display: block;
+                                height: 220px;
+                                opacity: 0.6;
+                                position: absolute;
+                                left: 50%;
+                                transform: translate(-50%, 0);
+                                margin-top: 30px;
+                            }
+                        }
+
+                        a.goto_store {
+                            font-size: 1rem;
+                            height: 50px;
+                            line-height: 50px;
+                            width: 180px;
+                            display: block;
+                            margin: 20px auto;
+
+                            img {
+                                width: 20px;
+                            }
+                        }
+
+                    }
+                }
+
+
+
+
             }
         }
     }
 
 
+
     footer {
         text-align: center;
         padding: 300px 0 0;
+
+        @include mobile {
+            padding: 350px 0 0;
+        }
 
         img.footer_logo {
             width: 90%;
@@ -418,6 +769,38 @@ body {
                     color: #ccc;
                 }
             }
+
+
+            @include mobile {
+                display: block;
+
+                p {
+                    display: block;
+                    width: 100%;
+                    font-size: 0.8rem;
+                }
+
+                .arbitrum_logo {
+                    display: block;
+                    width: 100%;
+                    text-align: left;
+                    margin: 15px 0;
+
+                    img {
+                        height: 35px;
+                    }
+                }
+
+                a {
+                    display: block;
+                    width: 100%;
+                    text-align: left;
+                    font-size: 0.8rem;
+                }
+
+            }
+
+
         }
     }
 }
