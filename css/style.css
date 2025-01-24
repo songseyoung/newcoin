@@ -264,6 +264,7 @@ body .banner h3 {
   color: #aaa;
 }
 body .banner a.goto_btn {
+  display: inline-block;
   font-family: shuttleblock, sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
@@ -271,12 +272,11 @@ body .banner a.goto_btn {
   background-color: #fff;
   color: #000;
   border-radius: 60px;
+  width: 250px;
   height: 65px;
   line-height: 65px;
-  width: 250px;
   margin-top: 60px;
   padding: 0;
-  display: inline-block;
   background-image: linear-gradient(to left bottom, #E5FF05, #00FFBB);
 }
 @media (max-width: 600px) {
@@ -346,13 +346,13 @@ body .contents .container .pin_list {
   left: 5%;
   top: 80px;
 }
-body .contents .container .pin_list h5 {
+body .contents .container .pin_list h3 {
   color: #787878;
   font-size: 1.05rem;
   font-weight: 300;
   padding: 10px 0;
 }
-body .contents .container .pin_list h5 span {
+body .contents .container .pin_list h3 span {
   padding: 0 20px 0 0;
 }
 body .contents .container .pin_list .active {

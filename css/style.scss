@@ -6,8 +6,6 @@
 //pretendard
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
-//font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-
 
 $main_font: shuttleblock, sans-serif;
 
@@ -89,12 +87,10 @@ body {
                     font-size: 1rem;
                     line-height: 120%;
                     padding: 15px 0;
-                    //backdrop-filter: blur(10px);
 
                     span {
                         color: #666;
                         font-size: 13px;
-
                     }
                 }
 
@@ -104,7 +100,6 @@ body {
                     }
                 }
             }
-
         }
 
         .quick_btn_area {
@@ -115,6 +110,7 @@ body {
             @include mobile {
                 display: none;
             }
+
 
             a {
                 margin-left: 10px;
@@ -146,15 +142,12 @@ body {
         }
 
 
-
         .mobile_menu {
             display: none;
-
 
             @include mobile {
                 display: block;
             }
-
 
             .mobile-menu__btn {
                 position: relative;
@@ -202,7 +195,6 @@ body {
                 text-align: center;
                 display: flex;
                 align-items: center;
-                //justify-content: center;
                 top: 65px;
                 left: 0;
                 right: 0;
@@ -213,7 +205,6 @@ body {
                 transition-delay: 0.2s;
                 overflow: hidden;
                 background-color: #111;
-
 
 
                 .list {
@@ -230,7 +221,6 @@ body {
                     a.menu {
                         display: block;
                         line-height: 50px;
-
 
                         &:nth-child(1) {
                             margin-top: 30px;
@@ -272,7 +262,6 @@ body {
             .mobile-menu__checkbox {
                 display: none;
             }
-
 
             .mobile-menu__checkbox:checked~.mobile-menu__container {
                 height: 100%;
@@ -326,6 +315,7 @@ body {
         }
 
         a.goto_btn {
+            display: inline-block;
             font-family: $main_font;
             font-size: 1.3rem;
             font-weight: 700;
@@ -333,12 +323,11 @@ body {
             background-color: #fff;
             color: #000;
             border-radius: 60px;
+            width: 250px;
             height: 65px;
             line-height: 65px;
-            width: 250px;
             margin-top: 60px;
             padding: 0;
-            display: inline-block;
             background-image: linear-gradient(to left bottom, #E5FF05, #00FFBB);
         }
 
@@ -409,7 +398,6 @@ body {
             display: block;
             width: 100vw;
             height: 2200px;
-            //overflow: hidden;
 
             .pin_list {
                 display: inline-block;
@@ -419,7 +407,7 @@ body {
                 left: 5%;
                 top: 80px;
 
-                h5 {
+                h3 {
                     color: #787878;
                     font-size: 1.05rem;
                     font-weight: 300;
@@ -437,7 +425,6 @@ body {
                 @include mobile {
                     display: none;
                 }
-
             }
 
 
@@ -551,7 +538,6 @@ body {
                     }
                 }
 
-
                 @include mobile {
                     height: auto;
 
@@ -583,12 +569,8 @@ body {
                                 }
                             }
                         }
-
                     }
                 }
-
-
-
             }
 
             section.section_03 {
@@ -702,17 +684,11 @@ body {
                                 width: 20px;
                             }
                         }
-
                     }
                 }
-
-
-
-
             }
         }
     }
-
 
 
     footer {
@@ -727,7 +703,6 @@ body {
             width: 90%;
             opacity: 0.1;
         }
-
 
         .footer_area {
             display: flex;
@@ -797,10 +772,7 @@ body {
                     text-align: left;
                     font-size: 0.8rem;
                 }
-
             }
-
-
         }
     }
 }

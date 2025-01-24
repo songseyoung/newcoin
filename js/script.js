@@ -4,12 +4,14 @@
         globalSceneOptions: {}
     });
 
+
     var tween1 = TweenMax.to('#animate1', 0.3, {
     });
     var tween2 = TweenMax.to('#animate2', 0.3, {
     });
     var tween3 = TweenMax.to('#animate3', 0.3, {
     });
+
 
     var scene1 = new ScrollMagic.Scene({
         triggerElement: "#trigger1",
@@ -19,7 +21,6 @@
         .setClassToggle('.info1', 'active')
         .setTween(tween1)
         .addTo(controller)
-
 
 
     var scene2 = new ScrollMagic.Scene({
