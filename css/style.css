@@ -551,6 +551,10 @@ body .contents .container section.section_02 .inner .content div span {
     text-align: center;
     padding: 140px 0 50px;
   }
+  body .contents .container section.section_02 .inner img.bg_blur {
+    width: 250%;
+    top: 70%;
+  }
   body .contents .container section.section_02 .inner .content {
     display: block;
     width: 85%;

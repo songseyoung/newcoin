@@ -631,6 +631,7 @@ body {
 
                 @include tablet {
                     .inner {
+
                         .content {
                             div {
                                 h1 {
@@ -650,6 +651,11 @@ body {
                             font-size: 1.3rem;
                             text-align: center;
                             padding: 140px 0 50px
+                        }
+
+                        img.bg_blur {
+                            width: 250%;
+                            top: 70%;
                         }
 
                         .content {
