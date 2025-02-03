@@ -18,6 +18,9 @@ body {
   color: #fff;
   position: relative;
 }
+body .hidden {
+  display: none;
+}
 body header {
   height: 70px;
   line-height: 70px;
@@ -381,6 +384,21 @@ body .contents .container {
   width: 100vw;
   height: 2200px;
 }
+@media (min-width: 1001px) and (max-width: 1300px) {
+  body .contents .container {
+    height: auto;
+  }
+}
+@media (min-width: 601px) and (max-width: 1000px) {
+  body .contents .container {
+    height: auto;
+  }
+}
+@media (max-width: 600px) {
+  body .contents .container {
+    height: auto;
+  }
+}
 body .contents .container .pin_list {
   display: inline-block;
   margin: auto;
@@ -671,11 +689,11 @@ body .contents .container section.section_03 .inner a.goto_store img {
 }
 body footer {
   text-align: center;
-  padding: 300px 0 0;
+  padding: 270px 0 0;
 }
 @media (max-width: 600px) {
   body footer {
-    padding: 350px 0 0;
+    padding: 180px 0 0;
   }
 }
 body footer img.footer_logo {

@@ -24,6 +24,9 @@ body {
     color: #fff;
     position: relative;
 
+    .hidden {
+        display: none;
+    }
 
     header {
         height: 70px;
@@ -449,6 +452,18 @@ body {
             width: 100vw;
             height: 2200px;
 
+            @include counter {
+                height: auto;
+            }
+
+            @include tablet {
+                height: auto;
+            }
+
+            @include mobile {
+                height: auto;
+            }
+
             .pin_list {
                 display: inline-block;
                 margin: auto;
@@ -803,10 +818,10 @@ body {
 
     footer {
         text-align: center;
-        padding: 300px 0 0;
+        padding: 270px 0 0;
 
         @include mobile {
-            padding: 350px 0 0;
+            padding: 180px 0 0;
         }
 
         img.footer_logo {

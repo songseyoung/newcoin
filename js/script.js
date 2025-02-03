@@ -43,3 +43,12 @@
         .addTo(controller)
 
 }())
+
+
+setTimeout(() => {
+    let coin1 = document.getElementById('img_coin_01')
+    let coin2 = document.getElementById('img_coin_02')
+
+    coin1.classList.add('hidden')
+    coin2.classList.remove('hidden')
+}, 900)
