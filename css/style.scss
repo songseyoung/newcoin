@@ -437,7 +437,7 @@ body {
     .contents {
         margin: 0 auto;
         position: relative;
-        padding-top: 150px;
+        padding-top: 50px;
 
         @include mobile {
             padding-top: 50px;
@@ -464,7 +464,6 @@ body {
                     font-weight: 300;
                     padding: 10px 0;
 
-
                     span {
                         padding: 0 20px 0 0;
                         font-family: $main_font;
@@ -488,12 +487,10 @@ body {
                 }
             }
 
-
             .wrap {
                 width: 100vw;
                 overflow: hidden;
             }
-
 
             section {
                 width: 850px;
@@ -541,6 +538,13 @@ body {
                         display: inline-block;
                     }
                 }
+
+                h3 {
+                    font-family: $main_font;
+                    font-size: 1.875rem;
+                    padding: 0 0 30px;
+                }
+
 
                 @include tablet {
                     .inner {
