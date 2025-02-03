@@ -62,6 +62,10 @@ body {
             display: inline-block;
             text-align: center;
 
+            @include tablet {
+                display: none;
+            }
+
             @include mobile {
                 display: none;
             }
@@ -107,6 +111,10 @@ body {
             text-align: right;
             padding-right: 5%;
 
+            @include tablet {
+                display: none;
+            }
+
             @include mobile {
                 display: none;
             }
@@ -144,6 +152,10 @@ body {
 
         .mobile_menu {
             display: none;
+
+            @include tablet {
+                display: block;
+            }
 
             @include mobile {
                 display: block;
@@ -331,6 +343,23 @@ body {
             background-image: linear-gradient(to left bottom, #E5FF05, #00FFBB);
         }
 
+
+        @include tablet {
+            h1 {
+                font-size: 4rem;
+                padding: 0 5%;
+            }
+
+            h3 {
+                padding: 35px 5% 0;
+
+                br {
+                    display: none;
+                }
+            }
+        }
+
+
         @include mobile {
             img {
                 width: 280px;
@@ -362,6 +391,15 @@ body {
 
         img {
             width: 80%;
+            margin: auto;
+        }
+
+        img.basic {
+            display: block;
+        }
+
+        img.mobile {
+            display: none;
         }
 
         h3 {
@@ -374,10 +412,23 @@ body {
         @include mobile {
             padding: 70px 0 130px;
 
-            h3 {
-                font-size: 1.2rem;
-                padding: 0 5%;
+            img {
+                width: 100%;
+            }
 
+            img.basic {
+                display: none;
+            }
+
+            img.mobile {
+                display: block;
+            }
+
+            h3 {
+                font-size: 1.6rem;
+                padding: 0 5%;
+                line-height: 150%;
+                margin-top: 0;
             }
         }
     }
@@ -385,7 +436,6 @@ body {
 
     .contents {
         margin: 0 auto;
-        border-top: 1px solid #2B2B2B;
         position: relative;
         padding-top: 150px;
 
@@ -409,17 +459,28 @@ body {
 
                 h3 {
                     color: #787878;
+                    font-family: $main_font;
                     font-size: 1.05rem;
                     font-weight: 300;
                     padding: 10px 0;
 
+
                     span {
                         padding: 0 20px 0 0;
+                        font-family: $main_font;
                     }
                 }
 
                 .active {
                     color: #fff;
+                }
+
+                @include counter {
+                    display: none;
+                }
+
+                @include tablet {
+                    display: none;
                 }
 
                 @include mobile {
@@ -460,6 +521,10 @@ body {
                     }
                 }
 
+                @include tablet {
+                    width: 90vw;
+                }
+
                 @include mobile {
                     width: 100vw;
                 }
@@ -474,6 +539,14 @@ body {
 
                     img {
                         display: inline-block;
+                    }
+                }
+
+                @include tablet {
+                    .inner {
+                        img {
+                            width: 50%;
+                        }
                     }
                 }
 
@@ -537,6 +610,19 @@ body {
                         }
                     }
                 }
+
+                @include tablet {
+                    .inner {
+                        .content {
+                            div {
+                                h1 {
+                                    font-size: 6rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
 
                 @include mobile {
                     height: auto;
