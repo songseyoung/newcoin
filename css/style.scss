@@ -490,6 +490,7 @@ body {
             .wrap {
                 width: 100vw;
                 overflow: hidden;
+                margin-top: -100px;
             }
 
             section {
@@ -557,6 +558,12 @@ body {
                 @include mobile {
                     height: auto;
 
+                    h3 {
+                        font-size: 1.3rem;
+                        text-align: center;
+                        padding: 0 0 10px;
+                    }
+
                     .inner {
                         display: block;
                         text-align: center;
@@ -572,10 +579,7 @@ body {
 
             section.section_02 {
                 height: 600px;
-                background-image: url(../img/section_2_bg.png);
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
+                position: relative;
 
                 .inner {
                     h3 {
@@ -584,7 +588,17 @@ body {
                         padding: 120px 0 70px;
                     }
 
+                    img.bg_blur {
+                        width: 150%;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: -1;
+                    }
+
                     .content {
+                        position: relative;
                         display: flex;
 
                         div {

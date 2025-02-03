@@ -422,6 +422,7 @@ body .contents .container .pin_list .active {
 body .contents .container .wrap {
   width: 100vw;
   overflow: hidden;
+  margin-top: -100px;
 }
 body .contents .container section {
   width: 850px;
@@ -478,6 +479,11 @@ body .contents .container section.section_01 h3 {
   body .contents .container section.section_01 {
     height: auto;
   }
+  body .contents .container section.section_01 h3 {
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 0 0 10px;
+  }
   body .contents .container section.section_01 .inner {
     display: block;
     text-align: center;
@@ -490,17 +496,23 @@ body .contents .container section.section_01 h3 {
 }
 body .contents .container section.section_02 {
   height: 600px;
-  background-image: url(../img/section_2_bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  position: relative;
 }
 body .contents .container section.section_02 .inner h3 {
   font-family: shuttleblock, sans-serif;
   font-size: 1.875rem;
   padding: 120px 0 70px;
 }
+body .contents .container section.section_02 .inner img.bg_blur {
+  width: 150%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
 body .contents .container section.section_02 .inner .content {
+  position: relative;
   display: flex;
 }
 body .contents .container section.section_02 .inner .content div {
